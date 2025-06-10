@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nuestro primer mes <3</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*Código con todo mi amor</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Hola mi amor<br />
+			Te acuerdas de nuestra primera cita?<br />
+			<span class="comments">// Aquel restaurante a la media noche. Mágico y ahora nuestro. </span><br />
+			Desde ese día juré enamorarte completamente y entregarte todo sin miedo, sin limitaciones.<br />
+			<span class="comments">// Tu carita preciosa, tu voz tierna, todo eso lo quería para mí!!!.</span><br />
+			Mi corazón latía muy fuerte, estaba nervioso y me sentía seguro y tranquilo<br />
+			entonces dije, ese es mi lugar, mi paz, mi tranquilidad.<br />
+			Desde ese día nuestros sentimientos se hicieron más fuertes, más constantes, más cercanos<br />
+			y el tiempo pasó muy rápido, pudimos compartir más, adorarnos más y enamorarnos más<br />
+			hasta que llegó el día de confirmar todos esos sentimientos, de ser legales<br />
+			de hacer la gran pregunta y cuestionarte si podemos ser novios.<br />
+			<span class="comments">// Otro día tan nervioso pero tan feliz y listo de entregarte mi alma entera.</span><br />
+			Así que decidiste decir sí y no cupe dentro de mí, porque brillas tanto, y más de blanco, amé y amo que lo hicieras para mí.<br />
+			Desde ese día amo más la vida, estoy muy radiante y contento de que estamos juntos y seguiré dando lo mejor de mí para que día a día y mes a mes nos adoremos enteramente.
+			<br>
+			<br>
+			En nuestro primer mes, te agradezco por inundarme con todo tu afecto, cariño y detalles<br />
+			y amor, espero que la cuenta que está a la derecha nunca pare de crecer y este es el recordatorio de eso. Feliz primer mes mi cielito.<br />
+			<br>
+			<br>
+			Si quieres un recuerdo nuestro, toca el corazón, lo elegí porque incluso desde la distancia, estás para mí y estoy para ti<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Nuestra cuenta va en
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Te amo demasiado!!<br/>
+					<div class="signature">- De Julián, para</div>
+					<div class="signature">mi vida Brenda.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2025, 4, 10);
+together.setHours(22);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
